@@ -1,0 +1,577 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13154C502471B040004B6FC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13154C4F2471B040004B6FC3 /* AppDelegate.swift */; };
+		13154C522471B040004B6FC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13154C512471B040004B6FC3 /* SceneDelegate.swift */; };
+		13154C542471B040004B6FC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13154C532471B040004B6FC3 /* ViewController.swift */; };
+		13154C572471B040004B6FC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13154C552471B040004B6FC3 /* Main.storyboard */; };
+		13154C592471B041004B6FC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13154C582471B041004B6FC3 /* Assets.xcassets */; };
+		13154C5C2471B041004B6FC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13154C5A2471B041004B6FC3 /* LaunchScreen.storyboard */; };
+		13154C672471B041004B6FC3 /* CoupleTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13154C662471B041004B6FC3 /* CoupleTimeTests.swift */; };
+		5426395118F4FB9F380FD3D8 /* Pods_CoupleTimeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA5E46A8164DE9B7463BFE0 /* Pods_CoupleTimeTests.framework */; };
+		F8F9CA8B8E3BFD0A154EEC4E /* Pods_CoupleTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D956BF0D09BB0E35194E1C9 /* Pods_CoupleTime.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		13154C632471B041004B6FC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13154C442471B040004B6FC3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13154C4B2471B040004B6FC3;
+			remoteInfo = CoupleTime;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		082AB7BDB74F767F95AFC642 /* Pods-CoupleTimeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoupleTimeTests.release.xcconfig"; path = "Target Support Files/Pods-CoupleTimeTests/Pods-CoupleTimeTests.release.xcconfig"; sourceTree = "<group>"; };
+		13154C4C2471B040004B6FC3 /* CoupleTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoupleTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13154C4F2471B040004B6FC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		13154C512471B040004B6FC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		13154C532471B040004B6FC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		13154C562471B040004B6FC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		13154C582471B041004B6FC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		13154C5B2471B041004B6FC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		13154C5D2471B041004B6FC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13154C622471B041004B6FC3 /* CoupleTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoupleTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13154C662471B041004B6FC3 /* CoupleTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupleTimeTests.swift; sourceTree = "<group>"; };
+		13154C682471B041004B6FC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D956BF0D09BB0E35194E1C9 /* Pods_CoupleTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoupleTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B436F7DC3A3C8F5B88FE824 /* Pods-CoupleTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoupleTime.debug.xcconfig"; path = "Target Support Files/Pods-CoupleTime/Pods-CoupleTime.debug.xcconfig"; sourceTree = "<group>"; };
+		ADA5E46A8164DE9B7463BFE0 /* Pods_CoupleTimeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoupleTimeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCAC43D273C2251604FBB776 /* Pods-CoupleTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoupleTime.release.xcconfig"; path = "Target Support Files/Pods-CoupleTime/Pods-CoupleTime.release.xcconfig"; sourceTree = "<group>"; };
+		E63385C6986824B5BDAB153F /* Pods-CoupleTimeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoupleTimeTests.debug.xcconfig"; path = "Target Support Files/Pods-CoupleTimeTests/Pods-CoupleTimeTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13154C492471B040004B6FC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8F9CA8B8E3BFD0A154EEC4E /* Pods_CoupleTime.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13154C5F2471B041004B6FC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5426395118F4FB9F380FD3D8 /* Pods_CoupleTimeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13154C432471B040004B6FC3 = {
+			isa = PBXGroup;
+			children = (
+				13154C4E2471B040004B6FC3 /* CoupleTime */,
+				13154C652471B041004B6FC3 /* CoupleTimeTests */,
+				13154C4D2471B040004B6FC3 /* Products */,
+				9BFBB5595BB8717FD9118839 /* Pods */,
+				8C1769DD5C18092F07B0E073 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		13154C4D2471B040004B6FC3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13154C4C2471B040004B6FC3 /* CoupleTime.app */,
+				13154C622471B041004B6FC3 /* CoupleTimeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13154C4E2471B040004B6FC3 /* CoupleTime */ = {
+			isa = PBXGroup;
+			children = (
+				13154C4F2471B040004B6FC3 /* AppDelegate.swift */,
+				13154C512471B040004B6FC3 /* SceneDelegate.swift */,
+				13154C532471B040004B6FC3 /* ViewController.swift */,
+				13154C552471B040004B6FC3 /* Main.storyboard */,
+				13154C582471B041004B6FC3 /* Assets.xcassets */,
+				13154C5A2471B041004B6FC3 /* LaunchScreen.storyboard */,
+				13154C5D2471B041004B6FC3 /* Info.plist */,
+			);
+			path = CoupleTime;
+			sourceTree = "<group>";
+		};
+		13154C652471B041004B6FC3 /* CoupleTimeTests */ = {
+			isa = PBXGroup;
+			children = (
+				13154C662471B041004B6FC3 /* CoupleTimeTests.swift */,
+				13154C682471B041004B6FC3 /* Info.plist */,
+			);
+			path = CoupleTimeTests;
+			sourceTree = "<group>";
+		};
+		8C1769DD5C18092F07B0E073 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D956BF0D09BB0E35194E1C9 /* Pods_CoupleTime.framework */,
+				ADA5E46A8164DE9B7463BFE0 /* Pods_CoupleTimeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9BFBB5595BB8717FD9118839 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B436F7DC3A3C8F5B88FE824 /* Pods-CoupleTime.debug.xcconfig */,
+				CCAC43D273C2251604FBB776 /* Pods-CoupleTime.release.xcconfig */,
+				E63385C6986824B5BDAB153F /* Pods-CoupleTimeTests.debug.xcconfig */,
+				082AB7BDB74F767F95AFC642 /* Pods-CoupleTimeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		13154C4B2471B040004B6FC3 /* CoupleTime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13154C6B2471B041004B6FC3 /* Build configuration list for PBXNativeTarget "CoupleTime" */;
+			buildPhases = (
+				B5CFD6BE0BD347D835FF4B9A /* [CP] Check Pods Manifest.lock */,
+				13154C482471B040004B6FC3 /* Sources */,
+				13154C492471B040004B6FC3 /* Frameworks */,
+				13154C4A2471B040004B6FC3 /* Resources */,
+				9A6D5201A703F5CD8299C96C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoupleTime;
+			productName = CoupleTime;
+			productReference = 13154C4C2471B040004B6FC3 /* CoupleTime.app */;
+			productType = "com.apple.product-type.application";
+		};
+		13154C612471B041004B6FC3 /* CoupleTimeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13154C6E2471B041004B6FC3 /* Build configuration list for PBXNativeTarget "CoupleTimeTests" */;
+			buildPhases = (
+				5F33A3227E9AE8F0346496CE /* [CP] Check Pods Manifest.lock */,
+				13154C5E2471B041004B6FC3 /* Sources */,
+				13154C5F2471B041004B6FC3 /* Frameworks */,
+				13154C602471B041004B6FC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13154C642471B041004B6FC3 /* PBXTargetDependency */,
+			);
+			name = CoupleTimeTests;
+			productName = CoupleTimeTests;
+			productReference = 13154C622471B041004B6FC3 /* CoupleTimeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		13154C442471B040004B6FC3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "James Tang";
+				TargetAttributes = {
+					13154C4B2471B040004B6FC3 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					13154C612471B041004B6FC3 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 13154C4B2471B040004B6FC3;
+					};
+				};
+			};
+			buildConfigurationList = 13154C472471B040004B6FC3 /* Build configuration list for PBXProject "CoupleTime" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 13154C432471B040004B6FC3;
+			productRefGroup = 13154C4D2471B040004B6FC3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13154C4B2471B040004B6FC3 /* CoupleTime */,
+				13154C612471B041004B6FC3 /* CoupleTimeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13154C4A2471B040004B6FC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13154C5C2471B041004B6FC3 /* LaunchScreen.storyboard in Resources */,
+				13154C592471B041004B6FC3 /* Assets.xcassets in Resources */,
+				13154C572471B040004B6FC3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13154C602471B041004B6FC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F33A3227E9AE8F0346496CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoupleTimeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A6D5201A703F5CD8299C96C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoupleTime/Pods-CoupleTime-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoupleTime/Pods-CoupleTime-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoupleTime/Pods-CoupleTime-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5CFD6BE0BD347D835FF4B9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoupleTime-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13154C482471B040004B6FC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13154C542471B040004B6FC3 /* ViewController.swift in Sources */,
+				13154C502471B040004B6FC3 /* AppDelegate.swift in Sources */,
+				13154C522471B040004B6FC3 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13154C5E2471B041004B6FC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13154C672471B041004B6FC3 /* CoupleTimeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		13154C642471B041004B6FC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13154C4B2471B040004B6FC3 /* CoupleTime */;
+			targetProxy = 13154C632471B041004B6FC3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		13154C552471B040004B6FC3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13154C562471B040004B6FC3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		13154C5A2471B041004B6FC3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13154C5B2471B041004B6FC3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		13154C692471B041004B6FC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		13154C6A2471B041004B6FC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		13154C6C2471B041004B6FC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B436F7DC3A3C8F5B88FE824 /* Pods-CoupleTime.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P75Q2YKSKR;
+				INFOPLIST_FILE = CoupleTime/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dayuant.CoupleTime;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		13154C6D2471B041004B6FC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCAC43D273C2251604FBB776 /* Pods-CoupleTime.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P75Q2YKSKR;
+				INFOPLIST_FILE = CoupleTime/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dayuant.CoupleTime;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		13154C6F2471B041004B6FC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E63385C6986824B5BDAB153F /* Pods-CoupleTimeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P75Q2YKSKR;
+				INFOPLIST_FILE = CoupleTimeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dayuant.CoupleTimeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoupleTime.app/CoupleTime";
+			};
+			name = Debug;
+		};
+		13154C702471B041004B6FC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 082AB7BDB74F767F95AFC642 /* Pods-CoupleTimeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P75Q2YKSKR;
+				INFOPLIST_FILE = CoupleTimeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dayuant.CoupleTimeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoupleTime.app/CoupleTime";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13154C472471B040004B6FC3 /* Build configuration list for PBXProject "CoupleTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13154C692471B041004B6FC3 /* Debug */,
+				13154C6A2471B041004B6FC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13154C6B2471B041004B6FC3 /* Build configuration list for PBXNativeTarget "CoupleTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13154C6C2471B041004B6FC3 /* Debug */,
+				13154C6D2471B041004B6FC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13154C6E2471B041004B6FC3 /* Build configuration list for PBXNativeTarget "CoupleTimeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13154C6F2471B041004B6FC3 /* Debug */,
+				13154C702471B041004B6FC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 13154C442471B040004B6FC3 /* Project object */;
+}
