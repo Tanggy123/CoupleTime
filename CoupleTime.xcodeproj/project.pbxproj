@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		13154C502471B040004B6FC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13154C4F2471B040004B6FC3 /* AppDelegate.swift */; };
 		13154C522471B040004B6FC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13154C512471B040004B6FC3 /* SceneDelegate.swift */; };
-		13154C542471B040004B6FC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13154C532471B040004B6FC3 /* ViewController.swift */; };
+		13154C542471B040004B6FC3 /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13154C532471B040004B6FC3 /* TimeViewController.swift */; };
 		13154C572471B040004B6FC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13154C552471B040004B6FC3 /* Main.storyboard */; };
 		13154C592471B041004B6FC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13154C582471B041004B6FC3 /* Assets.xcassets */; };
 		13154C5C2471B041004B6FC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13154C5A2471B041004B6FC3 /* LaunchScreen.storyboard */; };
 		13154C672471B041004B6FC3 /* CoupleTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13154C662471B041004B6FC3 /* CoupleTimeTests.swift */; };
+		13863C5E247927C000F47F4E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13863C5D247927C000F47F4E /* OnboardingViewController.swift */; };
+		13D6FC6F247A848C000F3ABC /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D6FC6E247A848C000F3ABC /* UnderlineTextField.swift */; };
 		5426395118F4FB9F380FD3D8 /* Pods_CoupleTimeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA5E46A8164DE9B7463BFE0 /* Pods_CoupleTimeTests.framework */; };
 		F8F9CA8B8E3BFD0A154EEC4E /* Pods_CoupleTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D956BF0D09BB0E35194E1C9 /* Pods_CoupleTime.framework */; };
 /* End PBXBuildFile section */
@@ -33,7 +35,7 @@
 		13154C4C2471B040004B6FC3 /* CoupleTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoupleTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13154C4F2471B040004B6FC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13154C512471B040004B6FC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		13154C532471B040004B6FC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		13154C532471B040004B6FC3 /* TimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
 		13154C562471B040004B6FC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13154C582471B041004B6FC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13154C5B2471B041004B6FC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,6 +43,8 @@
 		13154C622471B041004B6FC3 /* CoupleTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoupleTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13154C662471B041004B6FC3 /* CoupleTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupleTimeTests.swift; sourceTree = "<group>"; };
 		13154C682471B041004B6FC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13863C5D247927C000F47F4E /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		13D6FC6E247A848C000F3ABC /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
 		3D956BF0D09BB0E35194E1C9 /* Pods_CoupleTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoupleTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B436F7DC3A3C8F5B88FE824 /* Pods-CoupleTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoupleTime.debug.xcconfig"; path = "Target Support Files/Pods-CoupleTime/Pods-CoupleTime.debug.xcconfig"; sourceTree = "<group>"; };
 		ADA5E46A8164DE9B7463BFE0 /* Pods_CoupleTimeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoupleTimeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,12 +95,11 @@
 		13154C4E2471B040004B6FC3 /* CoupleTime */ = {
 			isa = PBXGroup;
 			children = (
+				13B8640824727FA40025C64C /* View */,
+				13B8640724727F490025C64C /* Controller */,
 				13154C4F2471B040004B6FC3 /* AppDelegate.swift */,
 				13154C512471B040004B6FC3 /* SceneDelegate.swift */,
-				13154C532471B040004B6FC3 /* ViewController.swift */,
-				13154C552471B040004B6FC3 /* Main.storyboard */,
 				13154C582471B041004B6FC3 /* Assets.xcassets */,
-				13154C5A2471B041004B6FC3 /* LaunchScreen.storyboard */,
 				13154C5D2471B041004B6FC3 /* Info.plist */,
 			);
 			path = CoupleTime;
@@ -109,6 +112,25 @@
 				13154C682471B041004B6FC3 /* Info.plist */,
 			);
 			path = CoupleTimeTests;
+			sourceTree = "<group>";
+		};
+		13B8640724727F490025C64C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				13154C532471B040004B6FC3 /* TimeViewController.swift */,
+				13D6FC6E247A848C000F3ABC /* UnderlineTextField.swift */,
+				13863C5D247927C000F47F4E /* OnboardingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		13B8640824727FA40025C64C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				13154C552471B040004B6FC3 /* Main.storyboard */,
+				13154C5A2471B041004B6FC3 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		8C1769DD5C18092F07B0E073 /* Frameworks */ = {
@@ -299,9 +321,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13154C542471B040004B6FC3 /* ViewController.swift in Sources */,
+				13154C542471B040004B6FC3 /* TimeViewController.swift in Sources */,
+				13D6FC6F247A848C000F3ABC /* UnderlineTextField.swift in Sources */,
 				13154C502471B040004B6FC3 /* AppDelegate.swift in Sources */,
 				13154C522471B040004B6FC3 /* SceneDelegate.swift in Sources */,
+				13863C5E247927C000F47F4E /* OnboardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
