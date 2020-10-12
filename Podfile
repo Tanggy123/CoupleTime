@@ -7,7 +7,7 @@ target 'CoupleTime' do
 
   # Pods for CoupleTime
    pod 'ChameleonFramework/Swift', :git => 'https://github.com/wowansm/Chameleon.git', :branch => 'swift5'
-
+   pod 'TimeZonePicker'
   target 'CoupleTimeTests' do
     inherit! :search_paths
     # Pods for testing

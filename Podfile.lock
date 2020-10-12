@@ -2,9 +2,15 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - TimeZonePicker (1.3.0)
 
 DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/wowansm/Chameleon.git`, branch `swift5`)
+  - TimeZonePicker
+
+SPEC REPOS:
+  trunk:
+    - TimeZonePicker
 
 EXTERNAL SOURCES:
   ChameleonFramework:
@@ -18,7 +24,8 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  TimeZonePicker: 7f3e60375dc3754a44f4a417f01e5c707b2b72b4
 
-PODFILE CHECKSUM: d984755d03f3cb2346e723d5744eba27c23f39fa
+PODFILE CHECKSUM: 57c336354ab1721bb0f3291d9171af34b4341aa9
 
 COCOAPODS: 1.9.1

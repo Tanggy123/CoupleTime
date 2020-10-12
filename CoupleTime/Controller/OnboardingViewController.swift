@@ -8,8 +8,12 @@
 
 import Foundation
 import UIKit
+import TimeZonePicker
 
-class OnboardingViewController: UIViewController {
+class OnboardingViewController: UIViewController, TimeZonePickerDelegate {
+    
+    @IBOutlet weak var timeZoneName: UILabel!
+    @IBOutlet weak var timeZoneOffset: UILabel!
     @IBOutlet weak var underlineTextField: UnderlineTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,13 +24,20 @@ class OnboardingViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func continueTapped(_ sender: UIButton) {
-        let userDefaults = UserDefaults.standard
-        userDefaults.setValue(underlineTextField.text, forKey: "name")
-        performSegue(withIdentifier: "onboardToMainSegue", sender: self)
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let vc = segue.destination as? SearchCityViewController {
+//            vc.delegate = self
+//        }
+//    }
     
     @IBAction func addCityTapped(_ sender: UIButton) {
-        
+        let timeZonePicker = TimeZonePickerViewController.getVC(withDelegate: self)
+        present(timeZonePicker, animated: true, completion: nil)
+    }
+    
+    func timeZonePicker(_ timeZonePicker: TimeZonePickerViewController, didSelectTimeZone timeZone: TimeZone) {
+        timeZoneName.text = timeZone.identifier
+        timeZoneOffset.text = timeZone.abbreviation()
+        timeZonePicker.dismiss(animated: true, completion: nil)
     }
 }

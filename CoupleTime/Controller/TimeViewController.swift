@@ -20,7 +20,7 @@ class TimeViewController: UIViewController {
     }
     
     func setTime() {
-        guard let tz: TimeZone = TimeZone.init(abbreviation: "PDT") else {return}
+        guard let tz: TimeZone = TimeZone.init(identifier: "America/Los_Angeles") else {return}
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US")
         dateFormatter.timeZone = tz
