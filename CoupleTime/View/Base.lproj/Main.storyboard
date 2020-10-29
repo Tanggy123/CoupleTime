@@ -28,7 +28,7 @@
             <objects>
                 <navigationController id="CE4-xc-8lb" userLabel="TimeNav" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Time" id="27l-QT-hEH" userLabel="Time"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fM3-3N-4aM">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="fM3-3N-4aM">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -118,17 +118,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojO-Qk-glk">
-                                <rect key="frame" x="155.5" y="568" width="103" height="44"/>
+                                <rect key="frame" x="155.5" y="563.5" width="103" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" red="0.19376453760000001" green="0.50850099329999998" blue="0.85232251879999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="V73-Tl-yOl" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="hu5-K9-Jbd"/>
+                                    <action selector="nextView:" destination="xyG-PO-q7o" eventType="touchUpInside" id="1Wz-gx-hJM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jb8-dj-WHI" userLabel="AddCity">
-                                <rect key="frame" x="187" y="437.5" width="40.5" height="30.5"/>
+                                <rect key="frame" x="187" y="433" width="40.5" height="30.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" image="plus.rectangle.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="29"/>
@@ -137,21 +137,14 @@
                                     <action selector="addCityTapped:" destination="xyG-PO-q7o" eventType="touchUpInside" id="zcm-7N-TYO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shanghai, China" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQw-LZ-Y5V">
-                                <rect key="frame" x="115.5" y="339" width="183" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asia/Shanghai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQw-LZ-Y5V">
+                                <rect key="frame" x="125.5" y="334.5" width="163" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qk-Zd-bsL">
-                                <rect key="frame" x="155" y="44" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ky-kx-GZJ">
-                                <rect key="frame" x="176.5" y="379" width="61.5" height="31.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GMT+8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ky-kx-GZJ">
+                                <rect key="frame" x="163.5" y="374.5" width="87" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -159,12 +152,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="jb8-dj-WHI" firstAttribute="centerY" secondItem="aBa-Lk-5LW" secondAttribute="centerY" id="4Yi-6i-iFz"/>
                             <constraint firstItem="oQw-LZ-Y5V" firstAttribute="centerX" secondItem="aBa-Lk-5LW" secondAttribute="centerX" id="KWR-Mo-cxY"/>
                             <constraint firstItem="jb8-dj-WHI" firstAttribute="top" secondItem="oQw-LZ-Y5V" secondAttribute="bottom" constant="66.5" id="a3X-6h-oHU"/>
                             <constraint firstItem="ojO-Qk-glk" firstAttribute="top" secondItem="jb8-dj-WHI" secondAttribute="bottom" constant="100" id="evX-P6-bi2"/>
                             <constraint firstItem="9ky-kx-GZJ" firstAttribute="top" secondItem="oQw-LZ-Y5V" secondAttribute="bottom" constant="8" id="kwU-r2-Fc0"/>
                             <constraint firstItem="SS3-bc-jis" firstAttribute="centerY" secondItem="aBa-Lk-5LW" secondAttribute="centerY" constant="-200" id="n9s-0Z-kqV"/>
-                            <constraint firstItem="1Mg-kw-3oS" firstAttribute="bottom" secondItem="ojO-Qk-glk" secondAttribute="bottom" constant="250" id="oTu-eB-IKO"/>
                             <constraint firstItem="SS3-bc-jis" firstAttribute="centerX" secondItem="aBa-Lk-5LW" secondAttribute="centerX" id="sHs-ee-hWG"/>
                             <constraint firstItem="jb8-dj-WHI" firstAttribute="centerX" secondItem="aBa-Lk-5LW" secondAttribute="centerX" id="u6I-r5-ICG"/>
                             <constraint firstItem="9ky-kx-GZJ" firstAttribute="centerX" secondItem="aBa-Lk-5LW" secondAttribute="centerX" id="uvg-MU-J32"/>
@@ -175,6 +168,7 @@
                     <connections>
                         <outlet property="timeZoneName" destination="oQw-LZ-Y5V" id="j8c-Rc-bR8"/>
                         <outlet property="timeZoneOffset" destination="9ky-kx-GZJ" id="c4R-20-T4G"/>
+                        <segue destination="V73-Tl-yOl" kind="presentation" identifier="nextSetting" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="SKc-8Q-JXu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FBI-J1-b0e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -189,43 +183,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your partner's time zone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQP-59-XhK">
-                                <rect key="frame" x="51.5" y="230" width="311" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Partner's Time Zone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQP-59-XhK">
+                                <rect key="frame" x="45.5" y="230" width="323" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zn1-CP-aYm">
-                                <rect key="frame" x="155.5" y="568" width="103" height="44"/>
+                                <rect key="frame" x="155.5" y="563.5" width="103" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" red="0.19376453760000001" green="0.50850099329999998" blue="0.85232251879999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NSP-A5-NN9" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="jfB-Tu-L4R"/>
+                                    <action selector="nextView:" destination="V73-Tl-yOl" eventType="touchUpInside" id="hJN-7p-NyU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHV-Ob-pAO" userLabel="AddCity">
-                                <rect key="frame" x="186" y="432" width="40.5" height="30.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asia/Shanghai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UX9-lE-DiB">
+                                <rect key="frame" x="125.5" y="334.5" width="163" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GMT+8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c56-Z2-LU6">
+                                <rect key="frame" x="163.5" y="374.5" width="87" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6BG-CW-C37" userLabel="AddCity">
+                                <rect key="frame" x="187" y="433" width="40.5" height="30.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" image="plus.rectangle.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="29"/>
                                 </state>
                                 <connections>
-                                    <action selector="addCityTapped:" destination="xyG-PO-q7o" eventType="touchUpInside" id="K0C-2v-ELr"/>
+                                    <action selector="addCityTapped:" destination="V73-Tl-yOl" eventType="touchUpInside" id="2Rq-ti-xUi"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6BG-CW-C37" firstAttribute="centerY" secondItem="2I7-yE-eUf" secondAttribute="centerY" id="02G-J0-5I6"/>
+                            <constraint firstItem="c56-Z2-LU6" firstAttribute="top" secondItem="UX9-lE-DiB" secondAttribute="bottom" constant="8" id="CL0-K4-9dQ"/>
+                            <constraint firstItem="6BG-CW-C37" firstAttribute="top" secondItem="UX9-lE-DiB" secondAttribute="bottom" constant="66.5" id="IlH-v5-hqt"/>
                             <constraint firstItem="Zn1-CP-aYm" firstAttribute="centerX" secondItem="2I7-yE-eUf" secondAttribute="centerX" id="O9y-G7-Gvz"/>
+                            <constraint firstItem="Zn1-CP-aYm" firstAttribute="top" secondItem="6BG-CW-C37" secondAttribute="bottom" constant="100" id="SsO-hq-r47"/>
+                            <constraint firstItem="6BG-CW-C37" firstAttribute="centerX" secondItem="2I7-yE-eUf" secondAttribute="centerX" id="ZL0-Gk-jEG"/>
+                            <constraint firstItem="UX9-lE-DiB" firstAttribute="centerX" secondItem="2I7-yE-eUf" secondAttribute="centerX" id="cvB-cX-bj0"/>
                             <constraint firstItem="iQP-59-XhK" firstAttribute="centerX" secondItem="2I7-yE-eUf" secondAttribute="centerX" id="oT6-72-AcJ"/>
                             <constraint firstItem="iQP-59-XhK" firstAttribute="centerY" secondItem="2I7-yE-eUf" secondAttribute="centerY" constant="-200" id="vHw-nP-hCO"/>
-                            <constraint firstItem="T3m-mK-5dL" firstAttribute="bottom" secondItem="Zn1-CP-aYm" secondAttribute="bottom" constant="250" id="zKj-Ps-FAM"/>
+                            <constraint firstItem="c56-Z2-LU6" firstAttribute="centerX" secondItem="2I7-yE-eUf" secondAttribute="centerX" id="wUV-St-CDn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T3m-mK-5dL"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Q65-Xh-e1r"/>
+                    <connections>
+                        <outlet property="timeZoneName" destination="UX9-lE-DiB" id="7W1-ag-eO5"/>
+                        <outlet property="timeZoneOffset" destination="c56-Z2-LU6" id="mP8-3h-uNH"/>
+                        <segue destination="NSP-A5-NN9" kind="presentation" identifier="nextSetting" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="LAL-xY-r8d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ux-b7-yEC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -252,14 +269,14 @@
                                     <color key="titleColor" red="0.19376453760000001" green="0.50850099329999998" blue="0.85232251879999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GL8-bn-74a" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="4F7-CF-OmY"/>
+                                    <action selector="nextView:" destination="NSP-A5-NN9" eventType="touchUpInside" id="3rV-0l-Lec"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JEA-0A-ffO" customClass="UnderlineTextField" customModule="CoupleTime" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JEA-0A-ffO" customClass="UnderlineTextField" customModule="CoupleTime" customModuleProvider="target">
                                 <rect key="frame" x="60" y="416" width="294" height="33.5"/>
                                 <color key="textColor" red="0.19376453757286072" green="0.50850099325180054" blue="0.85232251882553101" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="name"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
                                         <color key="value" red="0.19376453757286072" green="0.50850099325180054" blue="0.85232251882553101" alpha="1" colorSpace="calibratedRGB"/>
@@ -280,7 +297,8 @@
                         <viewLayoutGuide key="safeArea" id="nyN-Ko-dRt"/>
                     </view>
                     <connections>
-                        <outlet property="underlineTextField" destination="JEA-0A-ffO" id="MKD-N6-NW9"/>
+                        <outlet property="nameField" destination="JEA-0A-ffO" id="YdA-GZ-NAD"/>
+                        <segue destination="GL8-bn-74a" kind="presentation" identifier="nextSetting" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="YSY-lv-F7W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eb7-YC-0My" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

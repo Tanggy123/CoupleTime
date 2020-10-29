@@ -14,11 +14,11 @@ class OnboardingViewController: UIViewController, TimeZonePickerDelegate {
     
     @IBOutlet weak var timeZoneName: UILabel!
     @IBOutlet weak var timeZoneOffset: UILabel!
-    @IBOutlet weak var underlineTextField: UnderlineTextField!
+    @IBOutlet weak var nameField: UnderlineTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (underlineTextField != nil) {
-            underlineTextField.attributedPlaceholder =
+        if (nameField != nil) {
+            nameField.attributedPlaceholder =
             NSAttributedString(string: "name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         }
         // Do any additional setup after loading the view.
@@ -39,5 +39,17 @@ class OnboardingViewController: UIViewController, TimeZonePickerDelegate {
         timeZoneName.text = timeZone.identifier
         timeZoneOffset.text = timeZone.abbreviation()
         timeZonePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func nextView(_ sender: UIButton) {
+        let defaults = UserDefaults.standard
+        if defaults.string(forKey: "TZ") == nil {
+            defaults.set(timeZoneName.text, forKey: "TZ")
+        } else if defaults.string(forKey: "PartnerTZ") == nil {
+            defaults.set(timeZoneName.text, forKey: "PartnerTZ")
+        } else {
+            defaults.set(nameField.text, forKey: "PartnerName")
+        }
+        performSegue(withIdentifier: "nextSetting", sender: nil)
     }
 }
