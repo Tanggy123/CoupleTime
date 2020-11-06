@@ -15,20 +15,14 @@ class OnboardingViewController: UIViewController, TimeZonePickerDelegate {
     @IBOutlet weak var timeZoneName: UILabel!
     @IBOutlet weak var timeZoneOffset: UILabel!
     @IBOutlet weak var nameField: UnderlineTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if (nameField != nil) {
             nameField.attributedPlaceholder =
             NSAttributedString(string: "name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         }
-        // Do any additional setup after loading the view.
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let vc = segue.destination as? SearchCityViewController {
-//            vc.delegate = self
-//        }
-//    }
     
     @IBAction func addCityTapped(_ sender: UIButton) {
         let timeZonePicker = TimeZonePickerViewController.getVC(withDelegate: self)

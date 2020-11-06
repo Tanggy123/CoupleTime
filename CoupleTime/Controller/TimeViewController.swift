@@ -10,29 +10,57 @@ import UIKit
 
 class TimeViewController: UIViewController {
 
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var myTimeLabel: UILabel!
+    @IBOutlet weak var myDateLabel: UILabel!
+    @IBOutlet weak var partnerName: UILabel!
+    @IBOutlet weak var partnerTimeLabel: UILabel!
+    @IBOutlet weak var partnerDateLabel: UILabel!
+    
+    var myBackground: UIImage? = UIImage(named: "morning.png")
+    var myPartnerBackground: UIImage? = UIImage(named: "morning.png")
+    var timer: Timer! = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTime();
-        // Do any additional setup after loading the view.
+        setTime()
+        setPartnerName()
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(setTime), userInfo: nil, repeats: true)
     }
     
-    func setTime() {
-        guard let tz: TimeZone = TimeZone.init(identifier: "America/Los_Angeles") else {return}
+    @objc func setTime() {
+        let defaults = UserDefaults.standard
         let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "en_US")
-        dateFormatter.timeZone = tz
         
-        //Display time and date
+        //Retrieve time zone info
+        guard let myTimeZoneId = defaults.string(forKey: "TZ") else {return}
+        guard let partnerTimeZoneId = defaults.string(forKey: "PartnerTZ") else {return}
+        guard let myTZ: TimeZone = TimeZone.init(identifier: myTimeZoneId) else {return}
+        guard let partnerTZ = TimeZone.init(identifier: partnerTimeZoneId) else {return}
+        dateFormatter.locale = Locale(identifier: "en_US")
+        
+        //Set time
+        dateFormatter.timeZone = myTZ
         dateFormatter.dateStyle = .none
         dateFormatter.timeStyle = .short
-        timeLabel.text = dateFormatter.string(from: Date())
+        myTimeLabel.text = dateFormatter.string(from: Date())
         
         dateFormatter.dateFormat = "EEE, MMM d"
-        dateLabel.text = dateFormatter.string(from: Date())
+        myDateLabel.text = dateFormatter.string(from: Date())
+        
+        //Set partner time and date
+        dateFormatter.timeZone = partnerTZ
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = .short
+        partnerTimeLabel.text = dateFormatter.string(from: Date())
+        
+        dateFormatter.dateFormat = "EEE, MMM d"
+        partnerDateLabel.text = dateFormatter.string(from: Date())
+    }
+    
+    func setPartnerName() {
+        guard let name = UserDefaults.standard.string(forKey: "PartnerName") else {return}
+        partnerName.adjustsFontSizeToFitWidth = true
+        partnerName.text = name
     }
 
 }
-

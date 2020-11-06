@@ -21,68 +21,123 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VFx-0m-RzP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="1218"/>
-        </scene>
-        <!--TimeNav-->
-        <scene sceneID="vcg-wT-MbO">
-            <objects>
-                <navigationController id="CE4-xc-8lb" userLabel="TimeNav" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Time" id="27l-QT-hEH" userLabel="Time"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="fM3-3N-4aM">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="S8n-UI-RcP" kind="relationship" relationship="rootViewController" id="XqO-Zh-TDq"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9en-V1-J4h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="139" y="502"/>
+            <point key="canvasLocation" x="168" y="1217"/>
         </scene>
         <!--Time-->
         <scene sceneID="zjv-fc-SXe">
             <objects>
-                <viewController id="S8n-UI-RcP" userLabel="Time" customClass="TimeViewController" customModule="CoupleTime" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController interfaceStyle="light" id="S8n-UI-RcP" userLabel="Time" customClass="TimeViewController" customModule="CoupleTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dD6-N2-8xc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:59" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dB8-se-Fmr" userLabel="Time">
-                                <rect key="frame" x="10" y="118" width="394" height="61"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="51"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 18, 2020" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmk-Hs-BV5" userLabel="Date">
-                                <rect key="frame" x="50" y="229" width="314" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ScY-gY-U45">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1W-57-rcE">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="384.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="morning" translatesAutoresizingMaskIntoConstraints="NO" id="DEt-Yy-1mM" userLabel="MyTimeImageView">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="384.5"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHX-lT-hv3" userLabel="Name">
+                                                <rect key="frame" x="48" y="162" width="69.5" height="61"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="51"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:59 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dB8-se-Fmr" userLabel="MyTime">
+                                                <rect key="frame" x="186.5" y="142.5" width="206.5" height="61"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="51"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 18" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmk-Hs-BV5" userLabel="MyDate">
+                                                <rect key="frame" x="243" y="203.5" width="94" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="selectedTextColor" catalog="System" colorSpace="catalog"/>
+                                        <constraints>
+                                            <constraint firstItem="dB8-se-Fmr" firstAttribute="centerX" secondItem="t1W-57-rcE" secondAttribute="centerX" multiplier="1.4" id="3ng-pf-LEL"/>
+                                            <constraint firstItem="jmk-Hs-BV5" firstAttribute="centerX" secondItem="dB8-se-Fmr" secondAttribute="centerX" id="Ck2-vW-1TL"/>
+                                            <constraint firstItem="DEt-Yy-1mM" firstAttribute="leading" secondItem="t1W-57-rcE" secondAttribute="leading" id="GWL-mO-ISl"/>
+                                            <constraint firstItem="mHX-lT-hv3" firstAttribute="centerX" secondItem="t1W-57-rcE" secondAttribute="centerX" multiplier="0.4" id="IqD-N6-9tA"/>
+                                            <constraint firstItem="dB8-se-Fmr" firstAttribute="centerY" secondItem="t1W-57-rcE" secondAttribute="centerY" multiplier="0.9" id="OCN-S8-fLV"/>
+                                            <constraint firstAttribute="bottom" secondItem="DEt-Yy-1mM" secondAttribute="bottom" id="OWm-qv-ANT"/>
+                                            <constraint firstItem="DEt-Yy-1mM" firstAttribute="top" secondItem="t1W-57-rcE" secondAttribute="top" id="PhZ-QZ-IX4"/>
+                                            <constraint firstItem="mHX-lT-hv3" firstAttribute="centerY" secondItem="t1W-57-rcE" secondAttribute="centerY" id="ZHD-sd-SSO"/>
+                                            <constraint firstItem="jmk-Hs-BV5" firstAttribute="top" secondItem="dB8-se-Fmr" secondAttribute="bottom" id="hPA-2y-BwV"/>
+                                            <constraint firstAttribute="trailing" secondItem="DEt-Yy-1mM" secondAttribute="trailing" id="xxH-GH-QPb"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGP-IP-cHd">
+                                        <rect key="frame" x="0.0" y="384.5" width="414" height="384.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="night" translatesAutoresizingMaskIntoConstraints="NO" id="gUv-Iw-VBx" userLabel="PartnerTimeImageView">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="384.5"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbZ-qP-LgA" userLabel="PartnerName">
+                                                <rect key="frame" x="20" y="162" width="125.5" height="61"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="51"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:59 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yA8-SX-LNW" userLabel="PartnerTime">
+                                                <rect key="frame" x="188" y="142.5" width="203.5" height="61"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="51"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 17" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZN-9n-pQS" userLabel="PartnerDate">
+                                                <rect key="frame" x="243.5" y="203.5" width="92.5" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="ZZN-9n-pQS" firstAttribute="centerX" secondItem="yA8-SX-LNW" secondAttribute="centerX" id="4yu-Ds-U8J"/>
+                                            <constraint firstItem="nbZ-qP-LgA" firstAttribute="centerX" secondItem="yGP-IP-cHd" secondAttribute="centerX" multiplier="0.4" id="7Jx-fK-u39"/>
+                                            <constraint firstItem="yA8-SX-LNW" firstAttribute="centerY" secondItem="yGP-IP-cHd" secondAttribute="centerY" multiplier="0.9" id="88P-AA-t7m"/>
+                                            <constraint firstItem="nbZ-qP-LgA" firstAttribute="leading" secondItem="yGP-IP-cHd" secondAttribute="leading" constant="20" id="8k0-xa-URz"/>
+                                            <constraint firstItem="gUv-Iw-VBx" firstAttribute="leading" secondItem="yGP-IP-cHd" secondAttribute="leading" id="D1c-Zh-5Id"/>
+                                            <constraint firstItem="yA8-SX-LNW" firstAttribute="centerX" secondItem="yGP-IP-cHd" secondAttribute="centerX" multiplier="1.4" id="DHE-Ti-YFg"/>
+                                            <constraint firstAttribute="trailing" secondItem="gUv-Iw-VBx" secondAttribute="trailing" id="J8R-bH-ags"/>
+                                            <constraint firstItem="gUv-Iw-VBx" firstAttribute="top" secondItem="yGP-IP-cHd" secondAttribute="top" id="d7E-hu-CYG"/>
+                                            <constraint firstItem="ZZN-9n-pQS" firstAttribute="top" secondItem="yA8-SX-LNW" secondAttribute="bottom" id="rbM-KQ-XK1"/>
+                                            <constraint firstAttribute="bottom" secondItem="gUv-Iw-VBx" secondAttribute="bottom" id="vt3-v9-mxo"/>
+                                            <constraint firstItem="nbZ-qP-LgA" firstAttribute="centerY" secondItem="yGP-IP-cHd" secondAttribute="centerY" id="xw7-CN-Xke"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="tOQ-q9-UGF" firstAttribute="trailing" secondItem="dB8-se-Fmr" secondAttribute="trailing" constant="10" id="BhL-Q3-vg5"/>
-                            <constraint firstItem="jmk-Hs-BV5" firstAttribute="top" secondItem="dB8-se-Fmr" secondAttribute="bottom" constant="50" id="Ric-1g-MVl"/>
-                            <constraint firstItem="dB8-se-Fmr" firstAttribute="top" secondItem="tOQ-q9-UGF" secondAttribute="top" constant="30" id="cdq-dG-Q1O"/>
-                            <constraint firstItem="dB8-se-Fmr" firstAttribute="leading" secondItem="tOQ-q9-UGF" secondAttribute="leading" constant="10" id="jlD-68-wGf"/>
-                            <constraint firstItem="jmk-Hs-BV5" firstAttribute="leading" secondItem="tOQ-q9-UGF" secondAttribute="leading" constant="50" id="kpU-NG-GZB"/>
-                            <constraint firstItem="tOQ-q9-UGF" firstAttribute="trailing" secondItem="jmk-Hs-BV5" secondAttribute="trailing" constant="50" id="tr6-nz-dUN"/>
+                            <constraint firstItem="tOQ-q9-UGF" firstAttribute="bottom" secondItem="ScY-gY-U45" secondAttribute="bottom" id="XAi-lQ-wxk"/>
+                            <constraint firstItem="ScY-gY-U45" firstAttribute="top" secondItem="tOQ-q9-UGF" secondAttribute="top" id="bYc-Vk-sIb"/>
+                            <constraint firstItem="ScY-gY-U45" firstAttribute="trailing" secondItem="tOQ-q9-UGF" secondAttribute="trailing" id="bbS-yX-i3T"/>
+                            <constraint firstItem="ScY-gY-U45" firstAttribute="leading" secondItem="tOQ-q9-UGF" secondAttribute="leading" id="vNG-kx-Jv8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tOQ-q9-UGF"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <tabBarItem key="tabBarItem" title="Time" id="4tR-6A-5U1" userLabel="Time"/>
-                    <navigationItem key="navigationItem" id="8KS-gy-hci"/>
                     <connections>
-                        <outlet property="dateLabel" destination="jmk-Hs-BV5" id="hSz-YI-NfE"/>
-                        <outlet property="timeLabel" destination="dB8-se-Fmr" id="i2c-39-sYC"/>
+                        <outlet property="myDateLabel" destination="jmk-Hs-BV5" id="YLB-Bb-d2Y"/>
+                        <outlet property="myTimeLabel" destination="dB8-se-Fmr" id="YvP-vV-weV"/>
+                        <outlet property="partnerDateLabel" destination="ZZN-9n-pQS" id="V1k-qQ-9Yq"/>
+                        <outlet property="partnerName" destination="nbZ-qP-LgA" id="oG2-PP-Zap"/>
+                        <outlet property="partnerTimeLabel" destination="yA8-SX-LNW" id="sYn-w9-KXh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZd-45-COS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1072" y="502"/>
+            <point key="canvasLocation" x="167" y="504"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Dvx-zd-WXG">
@@ -95,13 +150,13 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="CE4-xc-8lb" kind="relationship" relationship="viewControllers" id="VKJ-Nk-CUB"/>
+                        <segue destination="S8n-UI-RcP" kind="relationship" relationship="viewControllers" id="uL6-vL-L0d"/>
                         <segue destination="srR-ww-PVi" kind="relationship" relationship="viewControllers" id="0dd-Ze-wdw"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ve9-bs-MT1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-854" y="851"/>
+            <point key="canvasLocation" x="-1003" y="865"/>
         </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="xQv-Jd-BQ9">
@@ -307,6 +362,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="morning" width="452" height="331.5"/>
+        <image name="night" width="221" height="254"/>
         <image name="plus.rectangle.fill" catalog="system" width="128" height="93"/>
     </resources>
 </document>
