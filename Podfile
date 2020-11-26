@@ -10,7 +10,7 @@ target 'CoupleTime' do
    pod 'TimeZonePicker'
   target 'CoupleTimeTests' do
     inherit! :search_paths
-    # Pods for testing
+  # Pods for testing
   end
 
 end

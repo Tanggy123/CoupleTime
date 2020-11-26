@@ -15,9 +15,12 @@ class TimeViewController: UIViewController {
     @IBOutlet weak var partnerName: UILabel!
     @IBOutlet weak var partnerTimeLabel: UILabel!
     @IBOutlet weak var partnerDateLabel: UILabel!
+    @IBOutlet weak var myBackground: UIImageView!
+    @IBOutlet weak var partnerBackground: UIImageView!
     
-    var myBackground: UIImage? = UIImage(named: "morning.png")
-    var myPartnerBackground: UIImage? = UIImage(named: "morning.png")
+    
+//    var myBackground: UIImage? = UIImage(named: "morning.png")
+//    var myPartnerBackground: UIImage? = UIImage(named: "morning.png")
     var timer: Timer! = Timer()
     
     override func viewDidLoad() {
@@ -38,7 +41,10 @@ class TimeViewController: UIViewController {
         guard let partnerTZ = TimeZone.init(identifier: partnerTimeZoneId) else {return}
         dateFormatter.locale = Locale(identifier: "en_US")
         
-        //Set time
+        // Get location info
+
+        
+        //Set my time
         dateFormatter.timeZone = myTZ
         dateFormatter.dateStyle = .none
         dateFormatter.timeStyle = .short

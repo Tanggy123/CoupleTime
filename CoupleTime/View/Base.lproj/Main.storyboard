@@ -128,8 +128,10 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <tabBarItem key="tabBarItem" title="Time" id="4tR-6A-5U1" userLabel="Time"/>
                     <connections>
+                        <outlet property="myBackground" destination="DEt-Yy-1mM" id="A8e-ZQ-PxN"/>
                         <outlet property="myDateLabel" destination="jmk-Hs-BV5" id="YLB-Bb-d2Y"/>
                         <outlet property="myTimeLabel" destination="dB8-se-Fmr" id="YvP-vV-weV"/>
+                        <outlet property="partnerBackground" destination="gUv-Iw-VBx" id="eah-XY-krU"/>
                         <outlet property="partnerDateLabel" destination="ZZN-9n-pQS" id="V1k-qQ-9Yq"/>
                         <outlet property="partnerName" destination="nbZ-qP-LgA" id="oG2-PP-Zap"/>
                         <outlet property="partnerTimeLabel" destination="yA8-SX-LNW" id="sYn-w9-KXh"/>
