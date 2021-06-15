@@ -18,6 +18,7 @@
 		13863C5E247927C000F47F4E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13863C5D247927C000F47F4E /* OnboardingViewController.swift */; };
 		13D6FC6F247A848C000F3ABC /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D6FC6E247A848C000F3ABC /* UnderlineTextField.swift */; };
 		5426395118F4FB9F380FD3D8 /* Pods_CoupleTimeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA5E46A8164DE9B7463BFE0 /* Pods_CoupleTimeTests.framework */; };
+		7D57D603A626FE28C6F40065 /* Pods_CoupleTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D956BF0D09BB0E35194E1C9 /* Pods_CoupleTime.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D57D603A626FE28C6F40065 /* Pods_CoupleTime.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

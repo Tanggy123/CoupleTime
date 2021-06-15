@@ -9,43 +9,48 @@
 import UIKit
 
 protocol TimeZonePickerDataSourceDelegate: class {
-    func timeZonePickerDataSource(_ timeZonePickerDataSource: TimeZonePickerDataSource, didSelectTimeZone timeZone: TimeZone)
+    func timeZonePickerDataSource(_ timeZonePickerDataSource: TimeZonePickerDataSource, didSelectTimeZone timeZone: TimeZone, _ lat: Double, _ lng: Double)
 }
 
 final class TimeZonePickerDataSource: NSObject {
-    
+
     private let tableView: UITableView
     private var timeZones: [CityCountryTimeZone] = []
-    
+
     private var searchText = ""
     private var filteredTimeZones: [CityCountryTimeZone] {
-        return timeZones.filter({ return $0.contains(searchText) })
+        if searchText.isEmpty {
+            return timeZones
+        } else {
+            return timeZones.filter({ return $0.contains(searchText) })
+        }
     }
-    
+
     weak var delegate: TimeZonePickerDataSourceDelegate?
-    
+
     init(tableView: UITableView) {
         self.tableView = tableView
         super.init()
         tableView.dataSource = self
         tableView.delegate = self
     }
-    
+
     func update(onComplete: @escaping (_ successful: Bool) -> ()) {
         DispatchQueue.global(qos: .userInitiated).async {
             do {
                 if let file = Bundle(for: TimeZonePickerDataSource.self).url(forResource: "CitiesAndTimeZones", withExtension: "json") {
                     let data = try Data(contentsOf: file)
-                    let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    if let rootArray = json as? [[String : String]] {
-                        // json is an array of [String : String] dictionaries
-                        for element in rootArray {
-                            self.timeZones.append(CityCountryTimeZone(city: element["name"]!, country: element["country"]!, timeZoneName: element["timeZoneName"]!))
+                    do {
+                        var timeZones = try JSONDecoder().decode([CityCountryTimeZone].self, from: data)
+                        timeZones.sort()
+
+                        DispatchQueue.main.async {
+                            self.timeZones = timeZones
+                            self.filter("")
+                            onComplete(true)
                         }
-                        self.timeZones.sort()
-                        self.filter("")
-                        onComplete(true)
-                    } else {
+                    } catch {
+
                         // should never get here / invalid json
                         onComplete(false)
                     }
@@ -59,23 +64,23 @@ final class TimeZonePickerDataSource: NSObject {
             }
         }
     }
-    
+
     func filter(_ searchString: String) {
         searchText = searchString
     }
-    
+
 }
 
 extension TimeZonePickerDataSource: UITableViewDataSource, UITableViewDelegate {
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredTimeZones.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell") {
             cell.textLabel?.text = filteredTimeZones[indexPath.item].string()
@@ -85,13 +90,13 @@ extension TimeZonePickerDataSource: UITableViewDataSource, UITableViewDelegate {
         cell.textLabel?.text = filteredTimeZones[indexPath.item].string()
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let selectedItem = filteredTimeZones[indexPath.item]
-        if let selectedTimeZone = TimeZone(identifier: selectedItem.timeZoneName) {
-            delegate?.timeZonePickerDataSource(self, didSelectTimeZone: selectedTimeZone)
+        if let selectedTimeZone = TimeZone(identifier: selectedItem.timeZoneName), let selectedLat = selectedItem.lat as? Double, let selectedLng = selectedItem.lng as? Double {
+            delegate?.timeZonePickerDataSource(self, didSelectTimeZone: selectedTimeZone, selectedLat, selectedLng)
         }
     }
-    
+
 }

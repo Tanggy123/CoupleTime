@@ -1,31 +1,29 @@
 PODS:
-  - ChameleonFramework/Default (2.1.0)
-  - ChameleonFramework/Swift (2.1.0):
-    - ChameleonFramework/Default
+  - Solar (2.1.0)
   - TimeZonePicker (1.3.0)
 
 DEPENDENCIES:
-  - ChameleonFramework/Swift (from `https://github.com/wowansm/Chameleon.git`, branch `swift5`)
-  - TimeZonePicker
+  - Solar
+  - TimeZonePicker (from `https://github.com/Tanggy123/TimeZonePicker.git`, commit `88f0b56f60fa4301b36de38b739850e0ded9eb33`)
 
 SPEC REPOS:
   trunk:
-    - TimeZonePicker
+    - Solar
 
 EXTERNAL SOURCES:
-  ChameleonFramework:
-    :branch: swift5
-    :git: https://github.com/wowansm/Chameleon.git
+  TimeZonePicker:
+    :commit: 88f0b56f60fa4301b36de38b739850e0ded9eb33
+    :git: https://github.com/Tanggy123/TimeZonePicker.git
 
 CHECKOUT OPTIONS:
-  ChameleonFramework:
-    :commit: 96d52c36a45847fff60bcff7a58fec1e4bd7390b
-    :git: https://github.com/wowansm/Chameleon.git
+  TimeZonePicker:
+    :commit: 88f0b56f60fa4301b36de38b739850e0ded9eb33
+    :git: https://github.com/Tanggy123/TimeZonePicker.git
 
 SPEC CHECKSUMS:
-  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Solar: 2dc6e7cc39186cb0c8228fa08df76fb50c7d8f24
   TimeZonePicker: 7f3e60375dc3754a44f4a417f01e5c707b2b72b4
 
-PODFILE CHECKSUM: 57c336354ab1721bb0f3291d9171af34b4341aa9
+PODFILE CHECKSUM: af195bafe109f5e28d9f29c9fc2c22f9562ede90
 
 COCOAPODS: 1.9.1

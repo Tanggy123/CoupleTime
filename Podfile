@@ -6,8 +6,9 @@ target 'CoupleTime' do
   use_frameworks!
 
   # Pods for CoupleTime
-   pod 'ChameleonFramework/Swift', :git => 'https://github.com/wowansm/Chameleon.git', :branch => 'swift5'
-   pod 'TimeZonePicker'
+   pod 'Solar'
+   pod 'TimeZonePicker', :git => 'https://github.com/Tanggy123/TimeZonePicker.git', :commit => '88f0b56f60fa4301b36de38b739850e0ded9eb33'
+
   target 'CoupleTimeTests' do
     inherit! :search_paths
   # Pods for testing

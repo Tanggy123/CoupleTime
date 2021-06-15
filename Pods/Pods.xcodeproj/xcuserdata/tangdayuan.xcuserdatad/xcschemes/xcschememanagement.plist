@@ -4,21 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ChameleonFramework.xcscheme</key>
+		<key>Pods-CoupleTime.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>Pods-CoupleTime.xcscheme</key>
+		<key>Pods-CoupleTimeTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>Pods-CoupleTimeTests.xcscheme</key>
+		<key>Solar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

@@ -9,10 +9,10 @@
 import UIKit
 
 public final class TimeZonePickerViewController: UIViewController {
-    
+
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-    
+
     public class func getVC(withDelegate delegate: TimeZonePickerDelegate) -> UINavigationController {
         let storyboard = UIStoryboard(name: "TimeZonePicker", bundle: Bundle(for: TimeZonePickerViewController.self))
         let nc = storyboard.instantiateInitialViewController() as! UINavigationController
@@ -21,13 +21,13 @@ public final class TimeZonePickerViewController: UIViewController {
         }
         return nc
     }
-    
+
     private lazy var dataSource: TimeZonePickerDataSource = {
         let ds = TimeZonePickerDataSource(tableView: self.tableView)
         ds.delegate = self
         return ds
     }()
-    
+
     weak var delegate: TimeZonePickerDelegate?
 
     override public func viewDidLoad() {
@@ -35,7 +35,7 @@ public final class TimeZonePickerViewController: UIViewController {
         configureTableView()
         configureSearchBar()
     }
-    
+
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         update()
@@ -43,7 +43,7 @@ public final class TimeZonePickerViewController: UIViewController {
             self.searchBar.becomeFirstResponder()
         }
     }
-    
+
     private func update() {
         dataSource.update { _ in
             DispatchQueue.main.async {
@@ -51,34 +51,34 @@ public final class TimeZonePickerViewController: UIViewController {
             }
         }
     }
-    
+
     private func configureTableView() {
         tableView.tableFooterView = UIView()
         tableView.keyboardDismissMode = .onDrag
     }
-    
+
     private func configureSearchBar() {
         searchBar.delegate = self
     }
-    
+
     @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
 }
 
 extension TimeZonePickerViewController: UISearchBarDelegate {
-    
+
     public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         dataSource.filter(searchText)
         tableView.reloadData()
     }
-    
+
 }
 
 extension TimeZonePickerViewController: TimeZonePickerDataSourceDelegate {
-    
-    func timeZonePickerDataSource(_ timeZonePickerDataSource: TimeZonePickerDataSource, didSelectTimeZone timeZone: TimeZone) {
-        delegate?.timeZonePicker(self, didSelectTimeZone: timeZone)
+
+    func timeZonePickerDataSource(_ timeZonePickerDataSource: TimeZonePickerDataSource, didSelectTimeZone timeZone: TimeZone, _ lat: Double, _ lng: Double) {
+        delegate?.timeZonePicker(self, didSelectTimeZone: timeZone, lat, lng)
     }
-    
+
 }

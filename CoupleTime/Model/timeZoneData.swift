@@ -14,9 +14,6 @@ class timeZoneData {
     
     init() {
         timeZoneCityNames = timeZoneIDs.map {(s1: String) -> String in
-//            let continent = s1.split(separator: "/")[0]
-//            let city = s1.split(separator: "/")[1]
-//            return city + ", " + continent
             return s1
         }
     }
