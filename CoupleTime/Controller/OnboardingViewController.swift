@@ -44,8 +44,8 @@ class OnboardingViewController: UIViewController, TimeZonePickerDelegate {
     
     @IBAction func nextView(_ sender: UIButton) {
         let defaults = UserDefaults.standard
-        if defaults.string(forKey: "TZ") == nil {
-            defaults.set(timeZoneName.text, forKey: "TZ")
+        if defaults.string(forKey: "MyTZ") == nil {
+            defaults.set(timeZoneName.text, forKey: "MyTZ")
             defaults.set(userLat, forKey: "MyLat")
             defaults.set(userLng, forKey: "MyLng")
         } else if defaults.string(forKey: "PartnerTZ") == nil {

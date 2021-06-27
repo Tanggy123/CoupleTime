@@ -10,7 +10,7 @@
         <!--Settings-->
         <scene sceneID="Wku-rT-VRd">
             <objects>
-                <tableViewController id="oTe-q4-CYT" sceneMemberID="viewController">
+                <tableViewController id="oTe-q4-CYT" customClass="SettingsTableViewController" customModule="CoupleTime" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="LqF-N4-QSD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -18,31 +18,71 @@
                         <sections>
                             <tableViewSection id="Rzl-1W-g1p">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="TEJ-JP-FOK">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="TEJ-JP-FOK">
                                         <rect key="frame" x="0.0" y="18" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TEJ-JP-FOK" id="yVe-hi-4yM">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Time Zone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95Z-5l-nxb" userLabel="MyTimeZone">
+                                                    <rect key="frame" x="20" y="12" width="110" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ss-JY-nF1" userLabel="TZ">
+                                                    <rect key="frame" x="333" y="11.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="95Z-5l-nxb" firstAttribute="leading" secondItem="yVe-hi-4yM" secondAttribute="leading" constant="20" id="1gN-UM-SYR"/>
+                                                <constraint firstItem="9Ss-JY-nF1" firstAttribute="centerY" secondItem="yVe-hi-4yM" secondAttribute="centerY" id="7Pe-Xz-eTY"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="9Ss-JY-nF1" secondAttribute="trailing" id="9w2-fy-xtS"/>
+                                                <constraint firstItem="95Z-5l-nxb" firstAttribute="centerY" secondItem="yVe-hi-4yM" secondAttribute="centerY" id="dbY-jM-Nf1"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="9Qg-AW-F2I">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="9Qg-AW-F2I">
                                         <rect key="frame" x="0.0" y="61.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Qg-AW-F2I" id="XuG-Z2-cVw">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partner Time Zone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S85-Ly-v86" userLabel="PartnerTimeZone">
+                                                    <rect key="frame" x="20" y="12" width="143" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKv-lE-5Zg" userLabel="TZ">
+                                                    <rect key="frame" x="333" y="11.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ZKv-lE-5Zg" secondAttribute="trailing" id="5ak-V9-FAZ"/>
+                                                <constraint firstItem="S85-Ly-v86" firstAttribute="centerY" secondItem="XuG-Z2-cVw" secondAttribute="centerY" id="Mof-Nt-7Ax"/>
+                                                <constraint firstItem="ZKv-lE-5Zg" firstAttribute="centerY" secondItem="XuG-Z2-cVw" secondAttribute="centerY" id="pXt-ia-71v"/>
+                                                <constraint firstItem="S85-Ly-v86" firstAttribute="leading" secondItem="XuG-Z2-cVw" secondAttribute="leading" constant="20" id="uAI-VZ-vfA"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="oTe-q4-CYT" id="A3g-Ls-c4p"/>
-                            <outlet property="delegate" destination="oTe-q4-CYT" id="Afr-FT-3PS"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="ewL-nC-ZZO"/>
+                    <connections>
+                        <outlet property="myTZ" destination="9Ss-JY-nF1" id="ZlC-3k-Eul"/>
+                        <outlet property="partnerTZ" destination="ZKv-lE-5Zg" id="PIR-Fz-gI9"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQP-ga-F0c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -52,13 +92,13 @@
         <scene sceneID="Jah-zC-h28">
             <objects>
                 <navigationController id="maW-8b-x65" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="rEM-Ws-3Xe" userLabel="Settings"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="circle.grid.3x3.fill" catalog="system" id="rEM-Ws-3Xe" userLabel="Settings"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XBm-Z7-WYH">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="oTe-q4-CYT" kind="relationship" relationship="rootViewController" id="mTo-uX-tJx"/>
+                        <segue destination="oTe-q4-CYT" kind="relationship" relationship="rootViewController" id="CQW-LV-UG3"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4er-Oc-rDP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -189,7 +229,7 @@
         <scene sceneID="glp-Dg-fFa">
             <objects>
                 <navigationController id="3zh-ah-Zwy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Time" id="Syh-q7-kHD" userLabel="Time"/>
+                    <tabBarItem key="tabBarItem" title="Time" image="globe" catalog="system" id="Syh-q7-kHD" userLabel="Time"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OBo-lH-KVE">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -421,12 +461,21 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eb7-YC-0My" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T5S-Zh-VMt" userLabel="TZ">
+                    <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </objects>
             <point key="canvasLocation" x="-1999" y="850"/>
         </scene>
     </scenes>
     <resources>
+        <image name="circle.grid.3x3.fill" catalog="system" width="128" height="112"/>
         <image name="day" width="452" height="331.5"/>
+        <image name="globe" catalog="system" width="128" height="121"/>
         <image name="night" width="221" height="254"/>
         <image name="plus.rectangle.fill" catalog="system" width="128" height="93"/>
     </resources>

@@ -16,6 +16,7 @@
 		13154C5C2471B041004B6FC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13154C5A2471B041004B6FC3 /* LaunchScreen.storyboard */; };
 		13154C672471B041004B6FC3 /* CoupleTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13154C662471B041004B6FC3 /* CoupleTimeTests.swift */; };
 		13863C5E247927C000F47F4E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13863C5D247927C000F47F4E /* OnboardingViewController.swift */; };
+		13AAAAE8267BD2D20012BFE5 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AAAAE7267BD2D20012BFE5 /* SettingsTableViewController.swift */; };
 		13D6FC6F247A848C000F3ABC /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D6FC6E247A848C000F3ABC /* UnderlineTextField.swift */; };
 		5426395118F4FB9F380FD3D8 /* Pods_CoupleTimeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA5E46A8164DE9B7463BFE0 /* Pods_CoupleTimeTests.framework */; };
 		7D57D603A626FE28C6F40065 /* Pods_CoupleTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D956BF0D09BB0E35194E1C9 /* Pods_CoupleTime.framework */; };
@@ -46,6 +47,7 @@
 		13154C662471B041004B6FC3 /* CoupleTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupleTimeTests.swift; sourceTree = "<group>"; };
 		13154C682471B041004B6FC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13863C5D247927C000F47F4E /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		13AAAAE7267BD2D20012BFE5 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		13D6FC6E247A848C000F3ABC /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
 		3D956BF0D09BB0E35194E1C9 /* Pods_CoupleTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoupleTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B436F7DC3A3C8F5B88FE824 /* Pods-CoupleTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoupleTime.debug.xcconfig"; path = "Target Support Files/Pods-CoupleTime/Pods-CoupleTime.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				13154C532471B040004B6FC3 /* TimeViewController.swift */,
+				13AAAAE7267BD2D20012BFE5 /* SettingsTableViewController.swift */,
 				13D6FC6E247A848C000F3ABC /* UnderlineTextField.swift */,
 				13863C5D247927C000F47F4E /* OnboardingViewController.swift */,
 			);
@@ -338,6 +341,7 @@
 				13154C522471B040004B6FC3 /* SceneDelegate.swift in Sources */,
 				13012E7024C2E7C2006CE231 /* timeZoneData.swift in Sources */,
 				13863C5E247927C000F47F4E /* OnboardingViewController.swift in Sources */,
+				13AAAAE8267BD2D20012BFE5 /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

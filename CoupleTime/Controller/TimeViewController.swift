@@ -32,8 +32,22 @@ class TimeViewController: UIViewController {
         setTime()
         setBackground()
         setPartnerName()
-        timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(setTime), userInfo: nil, repeats: true)
+        
+        // Timers to update clock and background
+        timer = Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(setTime), userInfo: nil, repeats: true)
         backgroundTimer = Timer.scheduledTimer(timeInterval: 1800, target: self, selector: #selector(setBackground), userInfo: nil, repeats: true)
+        
+        // Listens for settings change
+        NotificationCenter.default.addObserver(self, selector: #selector(refresh), name: Notification.Name.Action.refreshTime, object: nil)
+    }
+    
+    @objc func refresh(){
+        setTime()
+        setBackground()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     @objc func setTime() {
@@ -41,7 +55,7 @@ class TimeViewController: UIViewController {
         let dateFormatter = DateFormatter()
         
         //Retrieve time zone info
-        guard let myTimeZoneId = defaults.string(forKey: "TZ") else {return}
+        guard let myTimeZoneId = defaults.string(forKey: "MyTZ") else {return}
         guard let partnerTimeZoneId = defaults.string(forKey: "PartnerTZ") else {return}
         guard let myTZ: TimeZone = TimeZone.init(identifier: myTimeZoneId) else {return}
         guard let partnerTZ = TimeZone.init(identifier: partnerTimeZoneId) else {return}
