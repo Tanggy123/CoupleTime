@@ -325,6 +325,7 @@
                         <viewLayoutGuide key="safeArea" id="1Mg-kw-3oS"/>
                     </view>
                     <connections>
+                        <outlet property="con" destination="ojO-Qk-glk" id="zTs-SZ-Aqs"/>
                         <outlet property="timeZoneName" destination="oQw-LZ-Y5V" id="j8c-Rc-bR8"/>
                         <outlet property="timeZoneOffset" destination="9ky-kx-GZJ" id="c4R-20-T4G"/>
                         <segue destination="V73-Tl-yOl" kind="presentation" identifier="nextSetting" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="SKc-8Q-JXu"/>
@@ -398,6 +399,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Q65-Xh-e1r"/>
                     <connections>
+                        <outlet property="con" destination="Zn1-CP-aYm" id="r97-GR-Wm4"/>
                         <outlet property="timeZoneName" destination="UX9-lE-DiB" id="7W1-ag-eO5"/>
                         <outlet property="timeZoneOffset" destination="c56-Z2-LU6" id="mP8-3h-uNH"/>
                         <segue destination="NSP-A5-NN9" kind="presentation" identifier="nextSetting" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="LAL-xY-r8d"/>
@@ -456,6 +458,7 @@
                         <viewLayoutGuide key="safeArea" id="nyN-Ko-dRt"/>
                     </view>
                     <connections>
+                        <outlet property="con" destination="ZgP-Qg-2hj" id="Y0q-Xl-O5r"/>
                         <outlet property="nameField" destination="JEA-0A-ffO" id="YdA-GZ-NAD"/>
                         <segue destination="GL8-bn-74a" kind="presentation" identifier="nextSetting" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="YSY-lv-F7W"/>
                     </connections>
