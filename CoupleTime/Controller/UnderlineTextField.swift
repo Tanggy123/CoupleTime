@@ -71,6 +71,6 @@ class UnderlineTextField: UITextField , UITextFieldDelegate {
         }
         let substringToReplace = textFieldText[rangeOfTextToReplace]
         let count = textFieldText.count - substringToReplace.count + string.count
-        return count <= 10
+        return count <= 15
     }
 }

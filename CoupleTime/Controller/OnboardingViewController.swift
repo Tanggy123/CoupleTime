@@ -15,6 +15,7 @@ class OnboardingViewController: UIViewController, TimeZonePickerDelegate {
     @IBOutlet weak var timeZoneOffset: UILabel!
     @IBOutlet weak var nameField: UnderlineTextField!
     @IBOutlet weak var con: UIButton!
+    @IBOutlet weak var instruction: UILabel!
     
     // Latitude and longitude info for solar
     var userLat: Double = 0.0
@@ -22,7 +23,10 @@ class OnboardingViewController: UIViewController, TimeZonePickerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        instruction.adjustsFontSizeToFitWidth = true
         con.isHidden = true
+        
+        // For partner name onboarding page
         if (nameField != nil) {
             nameField.attributedPlaceholder =
             NSAttributedString(string: "name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])

@@ -14,6 +14,7 @@ class SettingsTableViewController: UITableViewController, TimeZonePickerDelegate
     
     @IBOutlet weak var myTZ: UILabel!
     @IBOutlet weak var partnerTZ: UILabel!
+    @IBOutlet weak var partnerName: UILabel!
     var changingMyTZ: Bool = false
 
     override func viewDidLoad() {
@@ -21,12 +22,24 @@ class SettingsTableViewController: UITableViewController, TimeZonePickerDelegate
         let defaults = UserDefaults.standard
         myTZ.text = defaults.string(forKey: "MyTZ")
         partnerTZ.text = defaults.string(forKey: "PartnerTZ")
+        partnerName.text = defaults.string(forKey: "PartnerName")
+        
+        /* Listens for partner name change*/
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshSettings), name: Notification.Name.Action2.refreshSettings, object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        changingMyTZ = indexPath.row == 0
-        let timeZonePicker = TimeZonePickerViewController.getVC(withDelegate: self)
-        present(timeZonePicker, animated: true, completion: nil)
+        if (indexPath.section == 0) {
+            changingMyTZ = indexPath.row == 0
+            let timeZonePicker = TimeZonePickerViewController.getVC(withDelegate: self)
+            present(timeZonePicker, animated: true, completion: nil)
+        } else if (indexPath.section == 1) {
+            performSegue(withIdentifier: "setPartnerName", sender: self)
+        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
@@ -41,20 +54,22 @@ class SettingsTableViewController: UITableViewController, TimeZonePickerDelegate
             defaults.set(lat, forKey: "PartnerLat")
             defaults.set(lng, forKey: "PartnerLng")
         }
-        refresh()
+        refreshSettings()
         timeZonePicker.dismiss(animated: true, completion: nil)
     }
     
-    func refresh() {
+    /* Refresh settings page and send noti to update TimeViewController. */
+    @objc func refreshSettings() {
         let defaults = UserDefaults.standard
         myTZ.text = defaults.string(forKey: "MyTZ")
         partnerTZ.text = defaults.string(forKey: "PartnerTZ")
-        NotificationCenter.default.post(name: Notification.Name.Action.refreshTime, object: nil)
+        partnerName.text = defaults.string(forKey: "PartnerName")
+        NotificationCenter.default.post(name: Notification.Name.Action1.refreshTime, object: nil)
     }
 }
 
 extension Notification.Name {
-    struct Action {
+    struct Action1 {
         static let refreshTime = Notification.Name("refreshTime")
     }
 }

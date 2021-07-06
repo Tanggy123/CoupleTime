@@ -38,10 +38,11 @@ class TimeViewController: UIViewController {
         backgroundTimer = Timer.scheduledTimer(timeInterval: 1800, target: self, selector: #selector(setBackground), userInfo: nil, repeats: true)
         
         // Listens for settings change
-        NotificationCenter.default.addObserver(self, selector: #selector(refresh), name: Notification.Name.Action.refreshTime, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(refresh), name: Notification.Name.Action1.refreshTime, object: nil)
     }
     
-    @objc func refresh(){
+    @objc func refresh() {
+        setPartnerName()
         setTime()
         setBackground()
     }

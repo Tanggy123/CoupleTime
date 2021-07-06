@@ -15,6 +15,7 @@
 		13154C592471B041004B6FC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13154C582471B041004B6FC3 /* Assets.xcassets */; };
 		13154C5C2471B041004B6FC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13154C5A2471B041004B6FC3 /* LaunchScreen.storyboard */; };
 		13154C672471B041004B6FC3 /* CoupleTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13154C662471B041004B6FC3 /* CoupleTimeTests.swift */; };
+		137D8FB5269108B5000FAC89 /* PartnerSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137D8FB4269108B5000FAC89 /* PartnerSettingsViewController.swift */; };
 		13863C5E247927C000F47F4E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13863C5D247927C000F47F4E /* OnboardingViewController.swift */; };
 		13AAAAE8267BD2D20012BFE5 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AAAAE7267BD2D20012BFE5 /* SettingsTableViewController.swift */; };
 		13D6FC6F247A848C000F3ABC /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D6FC6E247A848C000F3ABC /* UnderlineTextField.swift */; };
@@ -46,6 +47,7 @@
 		13154C622471B041004B6FC3 /* CoupleTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoupleTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13154C662471B041004B6FC3 /* CoupleTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupleTimeTests.swift; sourceTree = "<group>"; };
 		13154C682471B041004B6FC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		137D8FB4269108B5000FAC89 /* PartnerSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerSettingsViewController.swift; sourceTree = "<group>"; };
 		13863C5D247927C000F47F4E /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		13AAAAE7267BD2D20012BFE5 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		13D6FC6E247A848C000F3ABC /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			children = (
 				13154C532471B040004B6FC3 /* TimeViewController.swift */,
 				13AAAAE7267BD2D20012BFE5 /* SettingsTableViewController.swift */,
+				137D8FB4269108B5000FAC89 /* PartnerSettingsViewController.swift */,
 				13D6FC6E247A848C000F3ABC /* UnderlineTextField.swift */,
 				13863C5D247927C000F47F4E /* OnboardingViewController.swift */,
 			);
@@ -337,6 +340,7 @@
 			files = (
 				13154C542471B040004B6FC3 /* TimeViewController.swift in Sources */,
 				13D6FC6F247A848C000F3ABC /* UnderlineTextField.swift in Sources */,
+				137D8FB5269108B5000FAC89 /* PartnerSettingsViewController.swift in Sources */,
 				13154C502471B040004B6FC3 /* AppDelegate.swift in Sources */,
 				13154C522471B040004B6FC3 /* SceneDelegate.swift in Sources */,
 				13012E7024C2E7C2006CE231 /* timeZoneData.swift in Sources */,
