@@ -4,7 +4,7 @@ PODS:
 
 DEPENDENCIES:
   - Solar
-  - TimeZonePicker (from `https://github.com/Tanggy123/TimeZonePicker.git`, commit `88f0b56f60fa4301b36de38b739850e0ded9eb33`)
+  - TimeZonePicker (from `https://github.com/Tanggy123/TimeZonePicker.git`, commit `195c29fa83fb9977b83f1c1d6c51c4a0e7e4a18c`)
 
 SPEC REPOS:
   trunk:
@@ -12,18 +12,18 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   TimeZonePicker:
-    :commit: 88f0b56f60fa4301b36de38b739850e0ded9eb33
+    :commit: 195c29fa83fb9977b83f1c1d6c51c4a0e7e4a18c
     :git: https://github.com/Tanggy123/TimeZonePicker.git
 
 CHECKOUT OPTIONS:
   TimeZonePicker:
-    :commit: 88f0b56f60fa4301b36de38b739850e0ded9eb33
+    :commit: 195c29fa83fb9977b83f1c1d6c51c4a0e7e4a18c
     :git: https://github.com/Tanggy123/TimeZonePicker.git
 
 SPEC CHECKSUMS:
   Solar: 2dc6e7cc39186cb0c8228fa08df76fb50c7d8f24
   TimeZonePicker: 7f3e60375dc3754a44f4a417f01e5c707b2b72b4
 
-PODFILE CHECKSUM: af195bafe109f5e28d9f29c9fc2c22f9562ede90
+PODFILE CHECKSUM: 1fe911d7d0675b58ad41f3fa85e55cfa75af8c46
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.1

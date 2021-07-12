@@ -7,7 +7,7 @@ target 'CoupleTime' do
 
   # Pods for CoupleTime
    pod 'Solar'
-   pod 'TimeZonePicker', :git => 'https://github.com/Tanggy123/TimeZonePicker.git', :commit => '88f0b56f60fa4301b36de38b739850e0ded9eb33'
+   pod 'TimeZonePicker', :git => 'https://github.com/Tanggy123/TimeZonePicker.git', :commit => '195c29fa83fb9977b83f1c1d6c51c4a0e7e4a18c'
 
   target 'CoupleTimeTests' do
     inherit! :search_paths

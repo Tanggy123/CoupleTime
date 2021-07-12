@@ -14,6 +14,7 @@ class PartnerSettingsViewController: UIViewController {
     @IBOutlet weak var partnerNameField: UnderlineTextField!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         let defaults = UserDefaults.standard
         partnerNameField.text = defaults.string(forKey: "PartnerName")
         partnerNameField.textColor = UIColor.black

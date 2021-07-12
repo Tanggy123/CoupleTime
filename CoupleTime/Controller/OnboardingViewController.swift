@@ -23,6 +23,8 @@ class OnboardingViewController: UIViewController, TimeZonePickerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Formatting
         instruction.adjustsFontSizeToFitWidth = true
         con.isHidden = true
         
@@ -30,8 +32,15 @@ class OnboardingViewController: UIViewController, TimeZonePickerDelegate {
         if (nameField != nil) {
             nameField.attributedPlaceholder =
             NSAttributedString(string: "name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+            nameField.delegate = self
+            let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+            view.addGestureRecognizer(tap) // Add tap gesture recognizer to background view
             con.isHidden = false
         }
+    }
+    
+    @objc func handleTap() {
+        nameField.resignFirstResponder() // dismiss keyoard
     }
     
     @IBAction func addCityTapped(_ sender: UIButton) {
@@ -62,5 +71,12 @@ class OnboardingViewController: UIViewController, TimeZonePickerDelegate {
             defaults.set(nameField.text, forKey: "PartnerName")
         }
         performSegue(withIdentifier: "nextSetting", sender: nil)
+    }
+}
+
+extension OnboardingViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // dismiss keyboard
+        return true
     }
 }

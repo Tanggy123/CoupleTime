@@ -21,22 +21,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //Current app version
         let infoDictionary = Bundle.main.infoDictionary
         let currentAppVersion = infoDictionary!["CFBundleShortVersionString"] as! String
-        //App version in userDefaults
-        let userDefaults = UserDefaults.standard
-        let appVersion = userDefaults.string(forKey: "appVersion")
+//        //App version in userDefaults
+        let defaults = UserDefaults.standard
+//        let appVersion = defaults.string(forKey: "appVersion")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var viewController: UIViewController
-        //if appVersion == nil || appVersion != currentAppVersion {
-            //userDefaults.setValue(currentAppVersion, forKey: "appVersion")
+        if !defaults.bool(forKey: "didLaunchBefore") {
+            defaults.setValue(currentAppVersion, forKey: "appVersion")
+            UserDefaults.standard.set(true, forKey: "didLaunchBefore")
             viewController = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController1") as! OnboardingViewController
-            // Clear UserDefaults
-            if let bundleID = Bundle.main.bundleIdentifier {
-                UserDefaults.standard.removePersistentDomain(forName: bundleID)
-            }
-        //} else {
-            //guard let vc = storyboard.instantiateInitialViewController() else {return}
-            //viewController = vc
-        //}
+//            // Clear UserDefaults
+//            if let bundleID = Bundle.main.bundleIdentifier {
+//                UserDefaults.standard.removePersistentDomain(forName: bundleID)
+//            }
+        } else {
+            guard let vc = storyboard.instantiateInitialViewController() else {return}
+            viewController = vc
+        }
         self.window?.rootViewController = viewController
     }
 
