@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		082AB7BDB74F767F95AFC642 /* Pods-CoupleTimeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoupleTimeTests.release.xcconfig"; path = "Target Support Files/Pods-CoupleTimeTests/Pods-CoupleTimeTests.release.xcconfig"; sourceTree = "<group>"; };
 		13012E6F24C2E7C2006CE231 /* timeZoneData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeZoneData.swift; sourceTree = "<group>"; };
-		13154C4C2471B040004B6FC3 /* CoupleTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoupleTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13154C4C2471B040004B6FC3 /* Couple Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Couple Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13154C4F2471B040004B6FC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13154C512471B040004B6FC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		13154C532471B040004B6FC3 /* TimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		13154C4D2471B040004B6FC3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13154C4C2471B040004B6FC3 /* CoupleTime.app */,
+				13154C4C2471B040004B6FC3 /* Couple Time.app */,
 				13154C622471B041004B6FC3 /* CoupleTimeTests.xctest */,
 			);
 			name = Products;
@@ -189,7 +189,7 @@
 			);
 			name = CoupleTime;
 			productName = CoupleTime;
-			productReference = 13154C4C2471B040004B6FC3 /* CoupleTime.app */;
+			productReference = 13154C4C2471B040004B6FC3 /* Couple Time.app */;
 			productType = "com.apple.product-type.application";
 		};
 		13154C612471B041004B6FC3 /* CoupleTimeTests */ = {
@@ -511,14 +511,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P75Q2YKSKR;
 				INFOPLIST_FILE = CoupleTime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dayuant.CoupleTime;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dayuant.CoupleTime;
+				PRODUCT_NAME = "Couple Time";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -530,14 +532,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P75Q2YKSKR;
 				INFOPLIST_FILE = CoupleTime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dayuant.CoupleTime;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dayuant.CoupleTime;
+				PRODUCT_NAME = "Couple Time";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GL8-bn-74a">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,7 +12,7 @@
         <!--Settings-->
         <scene sceneID="Wku-rT-VRd">
             <objects>
-                <tableViewController id="oTe-q4-CYT" customClass="SettingsTableViewController" customModule="CoupleTime" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="oTe-q4-CYT" customClass="SettingsTableViewController" customModule="Couple_Time" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="LqF-N4-QSD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,7 +130,7 @@
         <!--Partner's Name-->
         <scene sceneID="o4M-dH-GS3">
             <objects>
-                <viewController id="x5Q-FN-NTC" customClass="PartnerSettingsViewController" customModule="CoupleTime" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="x5Q-FN-NTC" customClass="PartnerSettingsViewController" customModule="Couple_Time" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eG8-nh-g5J">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,7 +138,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEy-yg-wAY">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xz8-b5-Oge" userLabel="Name Field" customClass="UnderlineTextField" customModule="CoupleTime" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xz8-b5-Oge" userLabel="Name Field" customClass="UnderlineTextField" customModule="Couple_Time" customModuleProvider="target">
                                         <rect key="frame" x="20" y="20" width="374" height="33.5"/>
                                         <color key="textColor" red="0.19376453760000001" green="0.50850099329999998" blue="0.85232251879999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -205,7 +206,7 @@
         <!--Time-->
         <scene sceneID="zjv-fc-SXe">
             <objects>
-                <viewController title="Time" id="S8n-UI-RcP" userLabel="Time" customClass="TimeViewController" customModule="CoupleTime" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Time" id="S8n-UI-RcP" userLabel="Time" customClass="TimeViewController" customModule="Couple_Time" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dD6-N2-8xc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -362,7 +363,7 @@
         <!--Onboarding View Controller-->
         <scene sceneID="xQv-Jd-BQ9">
             <objects>
-                <viewController storyboardIdentifier="OnboardingViewController1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xyG-PO-q7o" customClass="OnboardingViewController" customModule="CoupleTime" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingViewController1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xyG-PO-q7o" customClass="OnboardingViewController" customModule="Couple_Time" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aBa-Lk-5LW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -437,7 +438,7 @@
         <!--Onboarding View Controller-->
         <scene sceneID="gmP-oQ-4j0">
             <objects>
-                <viewController storyboardIdentifier="OnboardingViewController2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V73-Tl-yOl" customClass="OnboardingViewController" customModule="CoupleTime" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingViewController2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V73-Tl-yOl" customClass="OnboardingViewController" customModule="Couple_Time" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2I7-yE-eUf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -534,7 +535,7 @@
                                     <action selector="nextView:" destination="NSP-A5-NN9" eventType="touchUpInside" id="3rV-0l-Lec"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JEA-0A-ffO" customClass="UnderlineTextField" customModule="CoupleTime" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JEA-0A-ffO" customClass="UnderlineTextField" customModule="Couple_Time" customModuleProvider="target">
                                 <rect key="frame" x="60" y="416" width="294" height="33.5"/>
                                 <color key="textColor" red="0.19376453757286072" green="0.50850099325180054" blue="0.85232251882553101" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
