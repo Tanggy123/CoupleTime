@@ -30,7 +30,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 UserDefaults.standard.removePersistentDomain(forName: bundleID)
             }
             defaults.setValue(currentAppVersion, forKey: "appVersion")
-            UserDefaults.standard.set(true, forKey: "didLaunchBefore")
             viewController = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController1") as! OnboardingViewController
         } else {
             guard let vc = storyboard.instantiateInitialViewController() else {return}

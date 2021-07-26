@@ -27,25 +27,30 @@
                                             <rect key="frame" x="0.0" y="0.0" width="384.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Time Zone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95Z-5l-nxb" userLabel="MyTimeZone">
-                                                    <rect key="frame" x="20" y="12" width="108.5" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MyTimeZoneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="VUZ-nr-d7K">
+                                                    <rect key="frame" x="20" y="7" width="30" height="30"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ss-JY-nF1" userLabel="TZ">
                                                     <rect key="frame" x="334.5" y="11.5" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Time Zone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95Z-5l-nxb" userLabel="MyTimeZone">
+                                                    <rect key="frame" x="60" y="12" width="108.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="9Ss-JY-nF1" firstAttribute="centerY" secondItem="yVe-hi-4yM" secondAttribute="centerY" id="7Pe-Xz-eTY"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="9Ss-JY-nF1" secondAttribute="trailing" id="9w2-fy-xtS"/>
+                                                <constraint firstItem="VUZ-nr-d7K" firstAttribute="centerY" secondItem="yVe-hi-4yM" secondAttribute="centerY" id="ItI-cJ-Ep8"/>
                                                 <constraint firstItem="95Z-5l-nxb" firstAttribute="centerY" secondItem="yVe-hi-4yM" secondAttribute="centerY" id="dbY-jM-Nf1"/>
                                                 <constraint firstItem="9Ss-JY-nF1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="95Z-5l-nxb" secondAttribute="trailing" id="gTI-2L-reK"/>
-                                                <constraint firstItem="95Z-5l-nxb" firstAttribute="leading" secondItem="yVe-hi-4yM" secondAttribute="leadingMargin" id="yRb-Va-krl"/>
+                                                <constraint firstItem="95Z-5l-nxb" firstAttribute="leading" secondItem="VUZ-nr-d7K" secondAttribute="trailing" constant="10" id="igw-7W-FhN"/>
+                                                <constraint firstItem="VUZ-nr-d7K" firstAttribute="leading" secondItem="yVe-hi-4yM" secondAttribute="leadingMargin" id="ito-gc-8y3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -56,8 +61,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="384.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartnerTimeZoneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="wh5-i1-iUk">
+                                                    <rect key="frame" x="20" y="7" width="30" height="30"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partner Time Zone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S85-Ly-v86" userLabel="PartnerTimeZone">
-                                                    <rect key="frame" x="20" y="12" width="141.5" height="20.5"/>
+                                                    <rect key="frame" x="60" y="12" width="141.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -70,10 +78,12 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="S85-Ly-v86" firstAttribute="leading" secondItem="wh5-i1-iUk" secondAttribute="trailing" constant="10" id="3Hf-V6-zUg"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="ZKv-lE-5Zg" secondAttribute="trailing" id="5ak-V9-FAZ"/>
-                                                <constraint firstItem="S85-Ly-v86" firstAttribute="leading" secondItem="XuG-Z2-cVw" secondAttribute="leadingMargin" id="FP1-BF-BBg"/>
+                                                <constraint firstItem="wh5-i1-iUk" firstAttribute="leading" secondItem="XuG-Z2-cVw" secondAttribute="leadingMargin" id="Dgo-6u-n6o"/>
                                                 <constraint firstItem="S85-Ly-v86" firstAttribute="centerY" secondItem="XuG-Z2-cVw" secondAttribute="centerY" id="Mof-Nt-7Ax"/>
                                                 <constraint firstItem="ZKv-lE-5Zg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="S85-Ly-v86" secondAttribute="trailing" id="a0S-I1-4az"/>
+                                                <constraint firstItem="wh5-i1-iUk" firstAttribute="centerY" secondItem="XuG-Z2-cVw" secondAttribute="centerY" id="c36-DM-WMC"/>
                                                 <constraint firstItem="ZKv-lE-5Zg" firstAttribute="centerY" secondItem="XuG-Z2-cVw" secondAttribute="centerY" id="pXt-ia-71v"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -89,8 +99,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="384.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartnerNameIcon" translatesAutoresizingMaskIntoConstraints="NO" id="yOQ-Xl-S8R">
+                                                    <rect key="frame" x="20" y="7" width="30" height="30"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partner's Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRk-bS-mKh" userLabel="PartnerName">
-                                                    <rect key="frame" x="20" y="12" width="118.5" height="20.5"/>
+                                                    <rect key="frame" x="60" y="12" width="118.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -103,11 +116,13 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="yOQ-Xl-S8R" firstAttribute="leading" secondItem="CXk-wh-GQ8" secondAttribute="leadingMargin" id="1iN-h9-8yW"/>
+                                                <constraint firstItem="uRk-bS-mKh" firstAttribute="leading" secondItem="yOQ-Xl-S8R" secondAttribute="trailing" constant="10" id="8Jk-u0-RQ0"/>
                                                 <constraint firstItem="Sa1-CM-hdH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uRk-bS-mKh" secondAttribute="trailing" id="8Mq-JH-Nn1"/>
                                                 <constraint firstItem="uRk-bS-mKh" firstAttribute="centerY" secondItem="CXk-wh-GQ8" secondAttribute="centerY" id="MxJ-Rf-QKg"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Sa1-CM-hdH" secondAttribute="trailing" id="Psw-e1-cSh"/>
                                                 <constraint firstItem="Sa1-CM-hdH" firstAttribute="centerY" secondItem="CXk-wh-GQ8" secondAttribute="centerY" id="Xf8-rC-p8N"/>
-                                                <constraint firstItem="uRk-bS-mKh" firstAttribute="leading" secondItem="CXk-wh-GQ8" secondAttribute="leadingMargin" id="oei-sW-fnv"/>
+                                                <constraint firstItem="yOQ-Xl-S8R" firstAttribute="centerY" secondItem="CXk-wh-GQ8" secondAttribute="centerY" id="woU-5O-NAs"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -152,7 +167,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWj-N5-7Hf">
                                         <rect key="frame" x="183.5" y="88.5" width="47" height="39"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <state key="normal" title="Save"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" red="1" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="save:" destination="x5Q-FN-NTC" eventType="touchUpInside" id="pdN-mg-iRf"/>
                                         </connections>
@@ -194,6 +211,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XBm-Z7-WYH">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="labelColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="oTe-q4-CYT" kind="relationship" relationship="rootViewController" id="CQW-LV-UG3"/>
@@ -304,10 +324,15 @@
                             <constraint firstItem="ScY-gY-U45" firstAttribute="trailing" secondItem="tOQ-q9-UGF" secondAttribute="trailing" id="bbS-yX-i3T"/>
                             <constraint firstItem="ScY-gY-U45" firstAttribute="leading" secondItem="tOQ-q9-UGF" secondAttribute="leading" id="vNG-kx-Jv8"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <tabBarItem key="tabBarItem" title="Time" id="4tR-6A-5U1" userLabel="Time"/>
-                    <navigationItem key="navigationItem" title="Time" id="DXX-jg-GaZ"/>
+                    <navigationItem key="navigationItem" id="DXX-jg-GaZ"/>
                     <connections>
                         <outlet property="myBackground" destination="DEt-Yy-1mM" id="A8e-ZQ-PxN"/>
                         <outlet property="myDateLabel" destination="jmk-Hs-BV5" id="YLB-Bb-d2Y"/>
@@ -332,6 +357,9 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="labelColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="S8n-UI-RcP" kind="relationship" relationship="rootViewController" id="LQa-kt-Rpz"/>
@@ -350,6 +378,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="1" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="3zh-ah-Zwy" kind="relationship" relationship="viewControllers" id="CyC-xe-LgJ"/>
@@ -579,12 +608,19 @@
             <point key="canvasLocation" x="-1999" y="850"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="1" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
     <resources>
+        <image name="MyTimeZoneIcon" width="30" height="30"/>
+        <image name="PartnerNameIcon" width="30" height="30"/>
+        <image name="PartnerTimeZoneIcon" width="30" height="30"/>
         <image name="circle.grid.3x3.fill" catalog="system" width="128" height="112"/>
         <image name="day" width="452" height="331.5"/>
         <image name="globe" catalog="system" width="128" height="121"/>
         <image name="night" width="221" height="254"/>
         <image name="plus.rectangle.fill" catalog="system" width="128" height="93"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

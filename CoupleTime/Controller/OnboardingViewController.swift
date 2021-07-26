@@ -69,6 +69,8 @@ class OnboardingViewController: UIViewController, TimeZonePickerDelegate {
             defaults.set(userLng, forKey: "PartnerLng")
         } else {
             defaults.set(nameField.text, forKey: "PartnerName")
+            // Make sure onboarding screen will not launch again
+            UserDefaults.standard.set(true, forKey: "didLaunchBefore")
         }
         performSegue(withIdentifier: "nextSetting", sender: nil)
     }

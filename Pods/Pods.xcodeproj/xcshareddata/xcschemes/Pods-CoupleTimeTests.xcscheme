@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13154C4B2471B040004B6FC3"
-            BuildableName = "CoupleTime.app"
+            BuildableName = "Couple Time.app"
             BlueprintName = "CoupleTime"
             ReferencedContainer = "container:../CoupleTime.xcodeproj">
          </BuildableReference>
