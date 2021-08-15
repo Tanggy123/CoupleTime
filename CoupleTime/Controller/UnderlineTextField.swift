@@ -19,7 +19,7 @@ class UnderlineTextField: UITextField , UITextFieldDelegate {
         }
     }
 
-    @IBInspectable open var selectedLineColor : UIColor = UIColor.black {
+    @IBInspectable open var selectedLineColor : UIColor = #colorLiteral(red: 1, green: 0.4883337617, blue: 0.2560397685, alpha: 1) {
         didSet{
         }
     }
@@ -44,6 +44,7 @@ class UnderlineTextField: UITextField , UITextFieldDelegate {
         border.borderWidth = lineHeight
         self.layer.addSublayer(border)
         self.layer.masksToBounds = true
+        self.textColor = #colorLiteral(red: 1, green: 0.4883337617, blue: 0.2560397685, alpha: 1)
     }
 
     override func draw(_ rect: CGRect) {

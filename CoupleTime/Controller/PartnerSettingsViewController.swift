@@ -17,7 +17,6 @@ class PartnerSettingsViewController: UIViewController {
         super.viewDidLoad()
         let defaults = UserDefaults.standard
         partnerNameField.text = defaults.string(forKey: "PartnerName")
-        partnerNameField.textColor = UIColor.black
     }
     
     @IBAction func save(_ sender: UIButton) {
